@@ -15,12 +15,14 @@ Route::get('/about', function () {
 Route::get('/blog', function () {
     return view("blog");
 });
+Route::prefix('author')->group(function () {
 
-Route::get('/abouts',[AdminController::class,'abouts'])->name('abouts');
-Route::get('/blogs',[AdminController::class,'blogs'])->name('blogs');
-Route::get('/cerate',[AdminController::class,'cerate'])->name('cerate');
-Route::post('/insert',[AdminController::class,'insert'])->name('insert');
-
+    Route::get('/abouts',[AdminController::class,'abouts'])->name('abouts');
+    Route::get('/blogs',[AdminController::class,'blogs'])->name('blogs');
+    Route::get('/cerate',[AdminController::class,'cerate'])->name('cerate');
+    Route::post('/insert',[AdminController::class,'insert'])->name('insert');
+    Route::get('/edit/{id}',[AdminController::class,'edit'])->name('edit');
+});
 Route::get('/test-db', function () {
     try {
         DB::connection()->getPdo();

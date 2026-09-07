@@ -55,8 +55,8 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/cerate">เขียนบทความ</a>
-                                    <a class="dropdown-item" href="/blogs">บทความทั้งหมด</a>
+                                    <a class="dropdown-item" href="/author/cerate">เขียนบทความ</a>
+                                    <a class="dropdown-item" href="/author/blogs">บทความทั้งหมด</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
